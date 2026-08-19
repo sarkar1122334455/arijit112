@@ -12,7 +12,7 @@ export default function Hero() {
     setMounted(true);
   }, []);
 
-  const headlineText = "I BUILD AT THE INTERSECTION OF TECHNOLOGY AND BUSINESS.";
+  const headlineText = "BUILDING ACROSS SOFTWARE, AI, AND ENGINEERING.";
   const headlineWords = headlineText.split(" ");
 
   const headlineContainer = {
@@ -37,12 +37,12 @@ export default function Hero() {
 
   const centerNode = { cx: 250, cy: 250, label: 'ARIJIT' };
   const surroundingNodes = [
-    { cx: 250, cy: 70, label: 'ENGINEERING', delay: 0 },
-    { cx: 405.8, cy: 160, label: 'TECHNOLOGY', delay: 0.5 },
-    { cx: 405.8, cy: 340, label: 'BUSINESS', delay: 1 },
-    { cx: 250, cy: 430, label: 'SALES', delay: 1.5 },
-    { cx: 94.2, cy: 340, label: 'PRODUCT', delay: 2 },
-    { cx: 94.2, cy: 160, label: 'RESEARCH', delay: 2.5 },
+    { cx: 250, cy: 70, label: 'DEVELOPMENT', delay: 0 },
+    { cx: 405.8, cy: 160, label: 'AI/ML', delay: 0.5 },
+    { cx: 405.8, cy: 340, label: 'CYBERSECURITY', delay: 1 },
+    { cx: 250, cy: 430, label: 'ENGINEERING', delay: 1.5 },
+    { cx: 94.2, cy: 340, label: 'RESEARCH', delay: 2 },
+    { cx: 94.2, cy: 160, label: 'DSA', delay: 2.5 },
   ];
 
   if (!mounted) {
@@ -65,7 +65,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="font-mono text-xs md:text-sm tracking-[0.2em] text-accent uppercase"
           >
-            ENGINEER · RESEARCHER · ENTREPRENEUR
+            ECE STUDENT · DEVELOPER · RESEARCHER
           </motion.div>
 
           <motion.h1
@@ -91,7 +91,7 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl font-sans"
           >
-            Software engineer and researcher building expertise across machine learning, B2B sales engineering, and products that create real customer value. Currently studying Electronics & Communication Engineering.
+            Electronics &amp; Communication Engineering student at Guru Nanak Institute of Technology, Kolkata. Working across software development, AI/ML, cybersecurity, and engineering problem solving.
           </motion.p>
 
           <motion.div

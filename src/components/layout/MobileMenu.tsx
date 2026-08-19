@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect } from "react";
 
 const navLinks = [
-  { name: "Work", href: "#work" },
+  { name: "Projects", href: "#work" },
   { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Research", href: "#research" },
-  { name: "Entrepreneurship", href: "#entrepreneurship" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -109,7 +109,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 onClick={(e) => handleLinkClick(e, "#contact")}
                 className="px-8 py-3 rounded-full bg-accent text-bg-primary font-medium transition-transform hover:scale-105 active:scale-95 inline-block"
               >
-                Let&apos;s Talk
+                Contact
               </a>
             </motion.div>
           </nav>

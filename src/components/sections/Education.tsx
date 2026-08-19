@@ -4,40 +4,25 @@ import { motion } from 'motion/react'
 
 const milestones = [
   {
-    period: 'Foundation',
-    title: 'Electronics & Communication Engineering',
-    desc: 'Understanding systems at the fundamental level — circuits, signals, and the physics of technology.'
+    period: '2023 – Present',
+    title: 'B.Tech in Electronics & Communication Engineering',
+    desc: 'Guru Nanak Institute of Technology, Kolkata (MAKAUT)'
   },
   {
-    period: 'Building',
-    title: 'Software Development',
-    desc: 'React Native, Node.js, Next.js, MongoDB — learning to build products from architecture to deployment.'
+    period: '2023',
+    title: 'Higher Secondary',
+    desc: 'A.K. Ghosh Memorial School (WBCHSE)'
   },
   {
-    period: 'Systems',
-    title: 'Machine Learning',
-    desc: 'TensorFlow, Keras, LSTM, Random Forest — training models to find patterns in complex data.'
-  },
-  {
-    period: 'Depth',
-    title: 'Research & Publication',
-    desc: 'First-author research paper published in IJARSCT. Translating academic work into real applications.'
-  },
-  {
-    period: 'Business',
-    title: 'Entrepreneurship — Taraa',
-    desc: 'Building and selling a physical product. Learning pricing, marketing, customer interaction, and operations.'
-  },
-  {
-    period: 'Direction',
-    title: 'B2B Sales & Sales Engineering',
-    desc: 'Where technology understanding meets business value. The convergence of everything before it.'
+    period: '2021',
+    title: 'Secondary',
+    desc: 'A.K. Ghosh Memorial School (WBBSE)'
   }
 ]
 
-export default function Journey() {
+export default function Education() {
   return (
-    <section id="experience" className="py-24 w-full">
+    <section id="education" className="py-24 w-full">
       <div className="container max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,14 +32,11 @@ export default function Journey() {
           className="mb-16"
         >
           <div className="font-mono text-sm uppercase tracking-widest text-accent mb-6">
-            JOURNEY
+            EDUCATION
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-primary tracking-tight mb-6">
-            Deliberately building breadth.
+            Academic background.
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl font-sans leading-relaxed">
-            Every step was intentional. Engineering for depth. Software for building. Machine learning for systems thinking. Research for rigor. Entrepreneurship for customers. Sales engineering to connect it all.
-          </p>
         </motion.div>
 
         <div className="relative pl-6 md:pl-10">

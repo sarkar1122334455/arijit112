@@ -5,46 +5,26 @@ import { motion } from 'motion/react';
 const skills = [
   {
     id: '01',
-    title: 'Engineering & Development',
-    subtitle: 'Building full-stack applications from architecture to deployment.',
+    title: 'Programming',
+    subtitle: 'Core languages and problem solving.',
     tags: [
       'Java',
-      'Data Structures & Algorithms',
-      'React Native',
-      'Node.js',
-      'Express.js',
-      'Next.js',
-      'MongoDB',
-      'Firebase',
-      'REST APIs',
+      'JavaScript',
+      'C',
     ],
   },
   {
     id: '02',
-    title: 'Machine Learning & Research',
-    subtitle: 'Training models, analyzing data, publishing findings.',
+    title: 'Tools & Frameworks',
+    subtitle: 'Building applications and managing code.',
     tags: [
-      'Python',
-      'TensorFlow',
-      'Keras',
-      'NumPy',
-      'Pandas',
-      'Random Forest',
-      'LSTM',
-      'Bayesian Networks',
-    ],
-  },
-  {
-    id: '03',
-    title: 'Product & Business',
-    subtitle: 'Understanding customers, communicating solutions, building value.',
-    tags: [
-      'B2B Sales',
-      'Sales Engineering',
-      'Technical Communication',
-      'Product Thinking',
-      'Entrepreneurship',
-      'Customer Discovery',
+      'Node.js',
+      'React.js',
+      'Next.js',
+      'Express.js',
+      'MongoDB',
+      'Git',
+      'MATLAB',
     ],
   },
 ];
@@ -100,7 +80,7 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8"
         >
           {skills.map((skill) => (
             <motion.div key={skill.id} variants={itemVariants} className="flex flex-col">

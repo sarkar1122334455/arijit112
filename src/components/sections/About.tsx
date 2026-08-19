@@ -6,10 +6,10 @@ export default function About() {
   const milestones = [
     { icon: '🎓', label: 'Electronics & Communication Engineering' },
     { icon: '⚡', label: 'Software Development' },
-    { icon: '🧠', label: 'Machine Learning' },
+    { icon: '🧠', label: 'AI / Machine Learning' },
+    { icon: '🔒', label: 'Cybersecurity' },
     { icon: '📄', label: 'Research & Publication' },
-    { icon: '🚀', label: 'Entrepreneurship' },
-    { icon: '🤝', label: 'B2B Sales & Sales Engineering' },
+    { icon: '💻', label: 'Problem Solving' },
   ]
 
   const containerVariants = {
@@ -52,7 +52,7 @@ export default function About() {
             variants={itemVariants}
             className="heading-lg font-heading text-4xl md:text-5xl lg:text-6xl text-text-primary max-w-4xl"
           >
-            The intersection is the interesting part.
+            Building across disciplines.
           </motion.h2>
         </motion.div>
 
@@ -67,16 +67,13 @@ export default function About() {
             className="lg:w-[60%] space-y-8 font-sans body-lg text-lg text-text-secondary"
           >
             <motion.p variants={itemVariants}>
-              I started in Electronics & Communication Engineering — understanding circuits, signals, and systems at a fundamental level. But I kept asking a question that engineering courses don&apos;t answer: what happens after the engineering?
+              I&apos;m a B.Tech student in Electronics &amp; Communication Engineering at Guru Nanak Institute of Technology, Kolkata (MAKAUT). My interests span software development, AI/ML, cybersecurity, and core engineering.
             </motion.p>
             <motion.p variants={itemVariants}>
-              That question pulled me into software development, then machine learning, then research. I published a paper. I built applications that solve real problems. And then I started building something else entirely — a business. A real one, where people pay real money for a product.
+              I&apos;ve built projects ranging from an AI-powered mental health platform to Linux firewall configurations, from GLOF risk assessment systems to Django web applications. I also published a research paper as first author in IJARSCT.
             </motion.p>
             <motion.p variants={itemVariants}>
-              Each step taught me something the previous one couldn&apos;t. Engineering taught me rigor. Software taught me building. ML taught me thinking in systems. Research taught me depth. Entrepreneurship taught me customers.
-            </motion.p>
-            <motion.p variants={itemVariants}>
-              Now I&apos;m exploring where all of this converges: sales engineering, B2B sales, and technical product roles — positions where understanding both the technology and the customer isn&apos;t optional. <span className="font-bold text-accent">It&apos;s the job.</span>
+              I&apos;m interested in roles where technical depth meets real problem solving — whether that&apos;s development, engineering, or building products that work.
             </motion.p>
           </motion.div>
 

@@ -89,26 +89,18 @@ export default async function CaseStudyPage({ params }: PageProps) {
               ))}
             </div>
 
-            {project.publication && (
-              <div className="pt-8 flex flex-col gap-2">
-                <span className="text-xs font-mono uppercase tracking-widest text-accent">Publication</span>
-                <div className="flex flex-wrap items-center gap-4 text-sm font-sans text-text-secondary">
-                  <span className="bg-bg-tertiary px-3 py-1 rounded-md border border-border">
-                    {project.publication.journal}
-                  </span>
-                  {project.publication.doi && (
-                    <a 
-                      href={`https://doi.org/${project.publication.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-accent transition-colors underline decoration-border-primary underline-offset-4"
-                    >
-                      DOI: {project.publication.doi}
-                    </a>
-                  )}
-                </div>
-              </div>
-            )}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <span className="inline-block border border-accent/30 text-accent font-mono text-xs px-3 py-1 rounded-full">
+                {project.category}
+              </span>
+              <span className={`inline-block font-mono text-xs px-3 py-1 rounded-full border ${
+                project.status === 'Ongoing' 
+                  ? 'border-yellow-500/30 text-yellow-500' 
+                  : 'border-green-500/30 text-green-500'
+              }`}>
+                {project.status}
+              </span>
+            </div>
           </div>
         </section>
 
@@ -118,161 +110,47 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {caseStudy && (
           <article className="px-6 max-w-3xl mx-auto space-y-24">
             
-            {/* 01 - The Problem */}
-            {caseStudy.problem && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">01</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">The Problem</h2>
-                </div>
-                <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
-                  {caseStudy.problem}
-                </p>
-              </section>
-            )}
+            {/* 01 - Overview */}
+            <section className="space-y-6">
+              <div className="flex items-baseline gap-4">
+                <span className="font-mono text-sm text-accent">01</span>
+                <h2 className="font-heading text-3xl font-semibold text-text-primary">Overview</h2>
+              </div>
+              <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
+                {caseStudy.overview}
+              </p>
+            </section>
 
-            {/* 02 - Why It Matters */}
-            {caseStudy.whyItMatters && (
+            {/* 02 - Features */}
+            {caseStudy.features && caseStudy.features.length > 0 && (
               <section className="space-y-6">
                 <div className="flex items-baseline gap-4">
                   <span className="font-mono text-sm text-accent">02</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Why It Matters</h2>
+                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Features</h2>
                 </div>
-                <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
-                  {caseStudy.whyItMatters}
-                </p>
+                <ul className="space-y-4 font-sans text-lg text-text-secondary">
+                  {caseStudy.features.map((feature, i) => (
+                    <li key={i} className="flex gap-4">
+                      <span className="text-accent mt-1.5">•</span>
+                      <span className="leading-relaxed">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
 
-            {/* 03 - My Approach */}
-            {caseStudy.approach && (
+            {/* 03 - Technology */}
+            {caseStudy.technologies && caseStudy.technologies.length > 0 && (
               <section className="space-y-6">
                 <div className="flex items-baseline gap-4">
                   <span className="font-mono text-sm text-accent">03</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">My Approach</h2>
-                </div>
-                <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
-                  {caseStudy.approach}
-                </p>
-              </section>
-            )}
-
-            {/* 04 - System Architecture */}
-            {caseStudy.architecture && caseStudy.architecture.length > 0 && (
-              <section className="space-y-12">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">04</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">System Architecture</h2>
-                </div>
-                <div className="flex flex-col items-center py-8">
-                  {caseStudy.architecture.map((item, i) => (
-                    <div key={i} className="flex flex-col items-center w-full max-w-md">
-                      <div className="w-full bg-bg-secondary border border-border p-6 rounded-lg shadow-sm text-center">
-                        <span className="font-sans text-lg text-text-primary">{item}</span>
-                      </div>
-                      {i !== caseStudy.architecture.length - 1 && (
-                        <div className="h-12 w-px bg-border-primary relative flex justify-center">
-                          <div className="absolute bottom-0 w-2 h-2 border-b border-r border-border transform rotate-45 translate-y-1"></div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* 05 - Technology */}
-            {caseStudy.technologyDetail && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">05</span>
                   <h2 className="font-heading text-3xl font-semibold text-text-primary">Technology</h2>
                 </div>
-                <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
-                  {caseStudy.technologyDetail}
-                </p>
-              </section>
-            )}
-
-            {/* 06 - Challenges */}
-            {caseStudy.challenges && caseStudy.challenges.length > 0 && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">06</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Challenges</h2>
-                </div>
                 <ul className="space-y-4 font-sans text-lg text-text-secondary">
-                  {caseStudy.challenges.map((challenge, i) => (
-                    <li key={i} className="flex gap-4">
-                      <span className="text-accent mt-1.5">•</span>
-                      <span className="leading-relaxed">{challenge}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            {/* 07 - Solution */}
-            {caseStudy.solution && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">07</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Solution</h2>
-                </div>
-                <p className="font-sans text-lg text-text-secondary leading-relaxed whitespace-pre-wrap">
-                  {caseStudy.solution}
-                </p>
-              </section>
-            )}
-
-            {/* 08 - Results */}
-            {caseStudy.results && caseStudy.results.length > 0 && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">08</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Results</h2>
-                </div>
-                <ul className="space-y-4 font-sans text-lg text-text-secondary">
-                  {caseStudy.results.map((result, i) => (
+                  {caseStudy.technologies.map((tech, i) => (
                     <li key={i} className="flex gap-4">
                       <span className="text-accent mt-1.5">→</span>
-                      <span className="leading-relaxed">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            {/* 09 - What I Learned */}
-            {caseStudy.learned && caseStudy.learned.length > 0 && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">09</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">What I Learned</h2>
-                </div>
-                <ul className="space-y-4 font-sans text-lg text-text-secondary list-none">
-                  {caseStudy.learned.map((learned, i) => (
-                    <li key={i} className="flex gap-4">
-                      <span className="text-accent font-mono text-sm mt-1">{String(i + 1).padStart(2, '0')}</span>
-                      <span className="leading-relaxed">{learned}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            {/* 10 - Future Improvements */}
-            {caseStudy.futureImprovements && caseStudy.futureImprovements.length > 0 && (
-              <section className="space-y-6">
-                <div className="flex items-baseline gap-4">
-                  <span className="font-mono text-sm text-accent">10</span>
-                  <h2 className="font-heading text-3xl font-semibold text-text-primary">Future Improvements</h2>
-                </div>
-                <ul className="space-y-4 font-sans text-lg text-text-secondary">
-                  {caseStudy.futureImprovements.map((improvement, i) => (
-                    <li key={i} className="flex gap-4">
-                      <span className="text-accent mt-1.5">+</span>
-                      <span className="leading-relaxed">{improvement}</span>
+                      <span className="leading-relaxed">{tech}</span>
                     </li>
                   ))}
                 </ul>

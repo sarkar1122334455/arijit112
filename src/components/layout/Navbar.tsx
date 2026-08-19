@@ -5,11 +5,11 @@ import MobileMenu from "./MobileMenu";
 import ThemeToggle from "../ThemeToggle";
 
 const navLinks = [
-  { name: "Work", href: "#work" },
+  { name: "Projects", href: "#work" },
   { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Research", href: "#research" },
-  { name: "Entrepreneurship", href: "#entrepreneurship" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Achievements", href: "#achievements" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -104,7 +104,7 @@ export default function Navbar() {
               onClick={(e) => handleLinkClick(e, "#contact")}
               className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-accent text-bg-primary font-medium text-sm transition-transform hover:scale-105"
             >
-              Let&apos;s Talk
+              Contact
             </a>
           </nav>
 

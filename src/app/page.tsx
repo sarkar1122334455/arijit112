@@ -4,11 +4,9 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import Skills from "@/components/sections/Skills";
-import TechMeetsBusiness from "@/components/sections/TechMeetsBusiness";
-import Entrepreneurship from "@/components/sections/Entrepreneurship";
-import Research from "@/components/sections/Research";
-import Journey from "@/components/sections/Journey";
-import BeyondTheScreen from "@/components/sections/BeyondTheScreen";
+import Education from "@/components/sections/Education";
+import Achievements from "@/components/sections/Achievements";
+import Interests from "@/components/sections/Interests";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
@@ -28,19 +26,13 @@ export default function Home() {
         <Skills />
 
         <div className="section-divider" />
-        <TechMeetsBusiness />
+        <Education />
 
         <div className="section-divider" />
-        <Journey />
+        <Achievements />
 
         <div className="section-divider" />
-        <Research />
-
-        <div className="section-divider" />
-        <Entrepreneurship />
-
-        <div className="section-divider" />
-        <BeyondTheScreen />
+        <Interests />
 
         <div className="section-divider" />
         <Contact />

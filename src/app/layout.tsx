@@ -22,17 +22,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arijit Sarkar — Engineer | Sales Engineering | Technology | Entrepreneurship",
+  title: "Arijit Sarkar — Electronics & Communication Engineering Student | Developer",
   description:
-    "Arijit Sarkar is an Electronics & Communication Engineering student exploring the intersection of technology, B2B sales, sales engineering, machine learning, product building, research, and entrepreneurship.",
+    "Portfolio of Arijit Sarkar, B.Tech student in Electronics and Communication Engineering at Guru Nanak Institute of Technology, Kolkata. Working across software development, AI/ML, cybersecurity, and engineering.",
   keywords: [
     "Arijit Sarkar",
-    "Sales Engineering",
-    "B2B Sales",
-    "Software Engineer",
-    "Machine Learning",
-    "React Native",
-    "Entrepreneurship",
+    "Electronics and Communication Engineering",
+    "GNIT",
+    "Developer",
+    "Software Development",
+    "AI/ML",
+    "Cybersecurity",
     "Portfolio",
   ],
   authors: [{ name: "Arijit Sarkar" }],
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Arijit Sarkar — Engineer | Sales Engineering | Technology | Entrepreneurship",
+    title: "Arijit Sarkar — Electronics & Communication Engineering Student | Developer",
     description:
-      "Exploring the intersection of technology, B2B sales, sales engineering, machine learning, product building, research, and entrepreneurship.",
+      "Portfolio of Arijit Sarkar, B.Tech student in Electronics and Communication Engineering at Guru Nanak Institute of Technology, Kolkata.",
     siteName: "Arijit Sarkar",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arijit Sarkar — Engineer | Sales Engineering | Technology | Entrepreneurship",
+    title: "Arijit Sarkar — Electronics & Communication Engineering Student | Developer",
     description:
-      "Exploring the intersection of technology, B2B sales, sales engineering, machine learning, product building, research, and entrepreneurship.",
+      "Portfolio of Arijit Sarkar, B.Tech student in Electronics and Communication Engineering at Guru Nanak Institute of Technology, Kolkata.",
   },
   robots: {
     index: true,

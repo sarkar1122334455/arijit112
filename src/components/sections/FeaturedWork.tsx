@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
-import { projects } from '@/data/projects'
+import { projects, Project } from '@/data/projects'
 
 export default function FeaturedWork() {
   const containerVariants = {
@@ -36,22 +36,22 @@ export default function FeaturedWork() {
           className="mb-20 md:mb-32"
         >
           <span className="block font-mono text-sm text-accent uppercase tracking-widest mb-6">
-            FEATURED WORK
+            FEATURED PROJECTS
           </span>
           <h2 className="heading-lg font-heading text-4xl md:text-5xl lg:text-6xl text-text-primary">
-            Things I&apos;ve built and researched.
+            Featured Projects
           </h2>
         </motion.div>
 
         {/* Projects List */}
         <div className="space-y-24 md:space-y-32">
-          {projects.map((project: any, index: number) => {
+          {projects.map((project: Project, index: number) => {
             const isEven = index % 2 === 0
             const num = (index + 1).toString().padStart(2, '0')
             
             return (
               <motion.div
-                key={project.slug || index}
+                key={project.slug}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-100px' }}
@@ -69,16 +69,29 @@ export default function FeaturedWork() {
                 
                 {/* Project Content */}
                 <div className="w-full md:w-2/3 space-y-6">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="font-mono text-xs px-3 py-1 rounded-full border border-accent/40 bg-bg-secondary text-accent">
+                      {project.category}
+                    </span>
+                    <span className={`font-mono text-xs px-3 py-1 rounded-full border ${
+                      project.status === 'Ongoing' 
+                        ? 'border-amber-500/40 bg-amber-500/10 text-amber-600 dark:text-amber-400' 
+                        : 'border-emerald-500/40 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                    }`}>
+                      {project.status}
+                    </span>
+                  </div>
+
                   <h3 className="heading-md font-heading text-2xl md:text-3xl text-text-primary">
                     {project.title}
                   </h3>
                   
                   <p className="body-lg text-lg text-text-secondary">
-                    {project.problem || project.description}
+                    {project.description}
                   </p>
                   
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies?.map((tech: string, i: number) => (
                       <span 
                         key={i} 
@@ -87,11 +100,6 @@ export default function FeaturedWork() {
                         {tech}
                       </span>
                     ))}
-                    {project.publication && (
-                      <span className="font-mono text-xs px-3 py-1 rounded-full border border-accent bg-bg-secondary text-accent">
-                        DOI: {project.publication.doi}
-                      </span>
-                    )}
                   </div>
                   
                   <div className="pt-4">
@@ -106,37 +114,6 @@ export default function FeaturedWork() {
               </motion.div>
             )
           })}
-
-          {/* Teaser Card */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
-            variants={itemVariants}
-            className="mt-32 p-8 md:p-12 border border-dashed border-border rounded-2xl bg-bg-secondary/40 flex flex-col items-center text-center relative overflow-hidden"
-          >
-            <h3 className="heading-sm font-heading text-xl md:text-2xl text-text-primary mb-2">
-              More work in progress.
-            </h3>
-            <p className="body-sm text-sm md:text-base text-text-secondary mb-8">
-              Currently building. Stay tuned.
-            </p>
-            
-            {/* Animated Progress Bar */}
-            <div className="w-full max-w-xs h-[2px] bg-border rounded-full overflow-hidden relative">
-              <motion.div
-                className="absolute top-0 left-0 h-full bg-accent"
-                animate={{
-                  width: ['0%', '60%', '0%']
-                }}
-                transition={{
-                  duration: 3,
-                  ease: 'easeInOut',
-                  repeat: Infinity,
-                }}
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

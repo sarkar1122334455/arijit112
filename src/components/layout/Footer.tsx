@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'motion/react'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -17,20 +16,33 @@ export default function Footer() {
             ARIJIT SARKAR
           </span>
           <span className="text-sm font-sans text-text-tertiary">
-            &copy; 2025 &middot; Designed & built by Arijit Sarkar
+            &copy; 2025 &middot; Built by Arijit Sarkar
           </span>
         </div>
 
         <div className="flex items-center gap-6">
-          <Link href="#" className="text-sm font-sans text-text-secondary hover:text-accent transition-colors">
+          <Link 
+            href="https://github.com/sarkar1122334455" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-sans text-text-secondary hover:text-accent transition-colors"
+          >
             GitHub
           </Link>
           <span className="text-border">&middot;</span>
-          <Link href="#" className="text-sm font-sans text-text-secondary hover:text-accent transition-colors">
+          <Link 
+            href="https://linkedin.com/in/arijit-sarkar-9b6905292/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-sans text-text-secondary hover:text-accent transition-colors"
+          >
             LinkedIn
           </Link>
           <span className="text-border">&middot;</span>
-          <Link href="mailto:hello@arijitsarkar.com" className="text-sm font-sans text-text-secondary hover:text-accent transition-colors">
+          <Link 
+            href="mailto:sarkararijit112@gmail.com" 
+            className="text-sm font-sans text-text-secondary hover:text-accent transition-colors"
+          >
             Email
           </Link>
         </div>
